@@ -1,6 +1,6 @@
 # Terraform stack using github.com as VCS
 resource "spacelift_stack" "my_stack" {
-  administrative    = true
+  administrative    = false
   autodeploy        = true
   branch            = "main"
   description       = var.description
