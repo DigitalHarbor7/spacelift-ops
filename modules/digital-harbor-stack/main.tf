@@ -11,12 +11,12 @@ resource "spacelift_stack" "k8s-cluster" {
 }
 
 # For a stack
-resource "spacelift_context_attachment" "attachment" {
+resource "spacelift_context_attachment" "proxies" {
   context_id = "httpProxies"
   stack_id   = "my-stack-name"
   priority   = 0
 }
-resource "spacelift_context_attachment" "attachment" {
+resource "spacelift_context_attachment" "credentials" {
   context_id = "myPersonal"
   stack_id   = "my-stack-name"
   priority   = 0
