@@ -13,11 +13,11 @@ resource "spacelift_stack" "my_stack" {
 # For a stack
 resource "spacelift_context_attachment" "proxies" {
   context_id = "httpProxies"
-  stack_id   = "my-stack-name"
+  stack_id   = spacelift_stack.my_stack.id
   priority   = 0
 }
 resource "spacelift_context_attachment" "credentials" {
   context_id = "myPersonal"
-  stack_id   = "my-stack-name"
+  stack_id   = spacelift_stack.my_stack.id
   priority   = 0
 }
