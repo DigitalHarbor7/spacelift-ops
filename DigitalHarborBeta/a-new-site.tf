@@ -1,6 +1,6 @@
 # define stack to provision all the infrastructure
 module "a-new-site" {
-  source      = "../modules/digital-harbor-stack"
+  source      = "github.com/DigitalHarbor7/spacelift-ops//modules/digital-harbor-stack"
   description = "Stack to provision all the infrastructure for Caribbean Kings"
 
   repository = "digital-harbor-infrastructure"
