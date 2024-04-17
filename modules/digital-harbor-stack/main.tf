@@ -3,9 +3,9 @@ resource "spacelift_stack" "k8s-cluster" {
   administrative    = true
   autodeploy        = true
   branch            = "main"
-  description       = "Sandbox module"
-  name              = "my-stack-name"
-  project_root      = "foo-workspace"
+  description       = var.description
+  name              = var.stack_name
+  project_root      = var.project_root
   repository        = "spacelift-ops"
   terraform_version = "1.5.7"
 }
